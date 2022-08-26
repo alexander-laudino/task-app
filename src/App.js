@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Overview from "./components/Overview";
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class App extends Component {
           </label>
           <input type="submit" value="Submit" />
         </form>
-        <p>{this.state.tasks}</p>
+        <Overview tasks={this.state.tasks} />
       </div>
     );
   }
