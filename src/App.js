@@ -6,7 +6,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      value: "Enter new task:",
+      value: "Enter new task...",
       tasks: [],
     };
 
@@ -31,14 +31,11 @@ class App extends Component {
       <div className="App">
         <h1>{this.props.title}</h1>
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Task:
-            <input
-              type="text"
-              value={this.state.value}
-              onChange={this.handleChange}
-            />
-          </label>
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
           <input type="submit" value="Submit" />
         </form>
         <Overview tasks={this.state.tasks} />
