@@ -33,7 +33,11 @@ class App extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Task:
-            <textarea value={this.state.value} onChange={this.handleChange} />
+            <input
+              type="text"
+              value={this.state.value}
+              onChange={this.handleChange}
+            />
           </label>
           <input type="submit" value="Submit" />
         </form>

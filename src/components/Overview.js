@@ -9,9 +9,13 @@ class Overview extends Component {
   render() {
     const { tasks } = this.props;
 
+    const listTasks = tasks.map((task, index) => (
+      <li key={index.toString()}>{task}</li>
+    ));
+
     return (
       <div>
-        <p>{tasks}</p>
+        <ul>{listTasks}</ul>
       </div>
     );
   }
